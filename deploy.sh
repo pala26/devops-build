@@ -27,8 +27,8 @@ elif [[ $GIT_BRANCH == "origin/main" ]]; then
 
     # Push the Docker image to the prod repository
     docker push pala29/prod
-else
-    echo "Branch not recognized. No build or push will occur."
+else 
+    echo "Branch-not recognized. No build or push will occur."
     exit 1
 fi
 
