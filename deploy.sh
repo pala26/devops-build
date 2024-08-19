@@ -5,7 +5,7 @@
 docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
 
 # Check which branch is being built
-if [[ $GIT_BRANCH == "origin/dev" ]]; then
+if [ $GIT_BRANCH = "origin/dev" ]; then
     # Build your project
     chmod +x build.sh
     ./build.sh
@@ -16,7 +16,7 @@ if [[ $GIT_BRANCH == "origin/dev" ]]; then
     # Push the Docker image to the dev repository
     docker push $DOCKER_USERNAME/dev
 
-elif [[ $GIT_BRANCH == "origin/main" ]]; then
+elif [$GIT_BRANCH = "origin/main"]; then
     chmod +x build.sh
     ./build.sh
 
